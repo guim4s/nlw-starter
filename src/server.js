@@ -74,8 +74,7 @@ server.post("/savepoint", (req, res) => {
       return res.render("create-point.html", { saved:true });
    }
 
-    db.run(query, values, afterInsertData);
-
+   db.run(query, values, afterInsertData);
 
 });
 
@@ -90,7 +89,7 @@ server.get("/search", (req, res) => {
       
    }
 
-   // pegar os dados do db
+   // pegar os dados do db e fazer a busca 
    db.all(` SELECT * FROM places WHERE city LIKE  '%${search}%'`, function (err, rows) {
       if (err) {
          return console.log(err);

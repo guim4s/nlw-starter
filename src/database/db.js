@@ -7,7 +7,7 @@ const db = new sqlite3.Database("./src/database/database.db");
 module.exports = db;
 
 //utilizar o objeto para as operações no banco
-db.serialize(() => {
+// db.serialize(() => {
 
 //    // criar uma tabela com sqlite3
 //    db.run(`
@@ -71,13 +71,13 @@ db.serialize(() => {
 
 //    // });
 
-   db.all(` SELECT * FROM places`, function(err, rows) {      
-      if (err) {
-         return console.log(err);
-      }
+//    db.all(` SELECT * FROM places`, function(err, rows) {      
+//       if (err) {
+//          return console.log(err);
+//       }
 
-      console.log("Aqui estão os seus registros");
-      console.log(rows);
-   })
+//       console.log("Aqui estão os seus registros");
+//       console.log(rows);
+//    })
 
-})
+// })
